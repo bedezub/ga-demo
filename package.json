@@ -1,0 +1,22 @@
+{
+  "name": "ga-demo-bedezub",
+  "version": "1.0.0",
+  "description": "Github Action demo using Node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bedezub/ga-demo.git"
+  },
+  "author": "bedezub",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bedezub/ga-demo/issues"
+  },
+  "homepage": "https://github.com/bedezub/ga-demo#readme",
+  "dependencies": {
+    "moment": "^2.29.4"
+  }
+}
