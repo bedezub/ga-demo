@@ -1,8 +1,8 @@
-name: Github Actions Demo
+name: Github Actions Warmup
 run-name: ${{ github.actor }} is testing out Github Action 🚀
 on: [push]
 jobs: 
-  Explore-Github-Actions:
+  warm-up:
     runs-on: ubuntu-latest
     steps: 
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
@@ -16,12 +16,3 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-  Build-Node-App:
-    runs-on: ubuntu-latest
-    container: node:16
-    steps:
-      - run: node --version
-      - run: npm --version
-      - uses: actions/checkout@v3
-      - run: npm ci
-      - run: node app.js
