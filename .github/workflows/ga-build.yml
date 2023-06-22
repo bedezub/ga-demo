@@ -1,4 +1,4 @@
-name: Github Action Warmup
+name: Github Action - Build
 run-name: ${{ github.actor }} is building the project
 on: [push]
 jobs: 

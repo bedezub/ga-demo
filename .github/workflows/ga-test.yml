@@ -1,0 +1,10 @@
+name: Github Action - Testing
+run-name: ${{ github.actor }} is testing out the project
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container: node:16
+    steps:
+      - run: npm test
+  # Do testing here

@@ -1,4 +1,4 @@
-name: Github Actions Warmup
+name: Github Action - Warmup
 run-name: ${{ github.actor }} is testing out Github Action 🚀
 on: [push]
 jobs: 
