@@ -1,8 +1,8 @@
-name: Github Actions Demo
-run-name: ${{ github.actor }} is testing out Github Action 🚀
+name: GA Demo Full Workflow
+run-name: ${{ github.actor }} is building the project 🚀
 on: [push]
-jobs: 
-  Explore-Github-Actions:
+jobs:
+  warmup:
     runs-on: ubuntu-latest
     steps: 
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
@@ -16,3 +16,20 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+  build:
+    runs-on: ubuntu-latest
+    container: node:16
+    steps: 
+        - run: node --version
+        - run: npm --version
+        - uses: actions/checkout@v3
+        - run: npm ci
+        - run: node app.js
+  test:
+    runs-on: ubuntu-latest
+    container: node:16
+    steps:
+      - uses: actions/checkout@v3
+      - run: node --version
+      - run: npm install
+      - run: npm test
